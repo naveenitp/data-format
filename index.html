@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Formatter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Formatter</h1>
+
+        <div class="input-section">
+            <h2>Input Text</h2>
+            <textarea id="inputText" placeholder="Enter your data here..."></textarea>
+            <div class="char-count">Characters: <span id="charCount">0</span></div>
+        </div>
+
+        <div class="options-section">
+            <h2>Formatting Options</h2>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="removeSpaces"> Remove All Spaces
+                </label>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="trimLines"> Trim Leading/Trailing Spaces (per line)
+                </label>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="addQuotes"> Add Double Quotes Around Each Line
+                </label>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="ensureNewlines"> Ensure Each Item is on a New Line (splits by comma, then rejoins with newlines)
+                </label>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="convertToUppercase"> Convert to UPPERCASE
+                </label>
+            </div>
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="convertToLowercase"> Convert to lowercase
+                </label>
+            </div>
+            <button id="applyFormatting">Apply Formatting</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Output Data</h2>
+            <textarea id="outputText" readonly placeholder="Formatted data will appear here..."></textarea>
+            <div class="download-buttons">
+                <button id="downloadTxt">Download as .txt</button>
+                <button id="downloadCsv">Download as .csv</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
